@@ -34,39 +34,39 @@ Raw Data
 
 ## 1. Exploratory Data Analysis (EDA):
 
-** Examine dataset shape, data types, missing values, and statistical summaries.
+* Examine dataset shape, data types, missing values, and statistical summaries.
 
-** Visualize target distribution and feature correlations to understand patterns and relationships.
+* Visualize target distribution and feature correlations to understand patterns and relationships.
 
 ## 2. Preprocessing:
 
-** Encode the target variable (Toxic/NonToxic) into numerical labels.
+* Encode the target variable (Toxic/NonToxic) into numerical labels.
 
-** Remove constant features to reduce redundancy.
+* Remove constant features to reduce redundancy.
 
-** Scale features to normalize the data for machine learning models.
+* Scale features to normalize the data for machine learning models.
 
 ## 3. Feature Selection + Random Forest Pipeline:
 
-** Use SelectKBest to select the most relevant molecular descriptors.
+* Use SelectKBest to select the most relevant molecular descriptors.
 
-** Train a Random Forest classifier on the selected features.
+* Train a Random Forest classifier on the selected features.
 
-** Feature selection is applied inside the pipeline to prevent data leakage.
+* Feature selection is applied inside the pipeline to prevent data leakage.
 
 ## 4. Nested Cross-Validation with Hyperparameter Tuning:
 
-** Inner loop: tune hyperparameters (k, n_estimators, max_depth) using GridSearchCV.
+* Inner loop: tune hyperparameters (k, n_estimators, max_depth) using GridSearchCV.
 
-** Outer loop: evaluate model performance on unseen data for unbiased accuracy and F1-score.
+* Outer loop: evaluate model performance on unseen data for unbiased accuracy and F1-score.
 
-** Ensures robust evaluation, especially with imbalanced classes.
+* Ensures robust evaluation, especially with imbalanced classes.
 
 ## Results
 
-** Nested CV Accuracy: Mean accuracy across outer folds
+* Nested CV Accuracy: Mean accuracy across outer folds
 
-** Fold-wise metrics: Precision, Recall, F1-score for Toxic and Non-Toxic classes
+* Fold-wise metrics: Precision, Recall, F1-score for Toxic and Non-Toxic classes
 
 
 # Insights: Detects imbalance and identifies which features contribute most to toxicity classification.
