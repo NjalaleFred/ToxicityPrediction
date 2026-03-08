@@ -12,6 +12,7 @@ Target: Class → Toxic / Non-Toxic
 
 ## Pipeline Workflow
 
+```
 Raw Data
    │
    ├─ EDA → understand dataset & target distribution
@@ -28,6 +29,7 @@ Raw Data
    └─ Nested Cross-Validation
         ├─ Inner loop: hyperparameter tuning
         └─ Outer loop: model evaluation
+```
         
 
 # Project Workflow Summary
